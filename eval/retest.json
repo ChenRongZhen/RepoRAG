@@ -1,0 +1,197 @@
+[
+  {
+    "kind": "doc",
+    "question": "上下文压缩分哪三层，阈值是多少？",
+    "seconds": 25.0,
+    "refused": false,
+    "sources": [
+      "article/04-context.md（片段 1）",
+      "article/04-context.md（片段 14）"
+    ],
+    "trace": [
+      "retrieve:n=3",
+      "relevance:enough=True:generate_answer",
+      "answer"
+    ],
+    "answer": "上下文压缩分为三层，按从轻到重依次触发，阈值分别是：\n\n1. **50%**：截断臃肿的工具输出（`_snip_at`）[D2]\n2. **70%**：用 LLM 摘要旧对话（`_summarize_at`）[D2]\n3. **90%**：硬折叠（`_hard_collapse`），作为最后手段，只保留最后几条消息加一个摘要，其余全部折叠掉 [D1][D2]\n\n调度由 `maybe_compress` 负责：它先估算当前 token 用量，再从轻到重按需施加每一层，每施加一层就重新估算一次，够了就停 [D2]。",
+    "exit": 0
+  },
+  {
+    "kind": "doc",
+    "question": "edit_file 为什么要求唯一匹配？",
+    "seconds": 25.08,
+    "refused": false,
+    "sources": [
+      "article/02-tools.md（片段 8）",
+      "article/02-tools.md（片段 4）"
+    ],
+    "trace": [
+      "retrieve:n=3",
+      "relevance:enough=True:generate_answer",
+      "answer"
+    ],
+    "answer": "`edit_file` 要求唯一匹配，是为了消除“改哪一段”的歧义，把修改文件从模糊问题变成确定问题：模型不用懂行号、不用算偏移，只需原样引用想改的代码，由工具保证这段引用在文件中没有歧义 [D2]。这也是用约束换可靠性的设计，系统提示词里专门要求 old_string 必须唯一 [D2]。\n\n背景是另外两条路都不可靠：按行号打补丁时，模型对行号的感知极不可靠，文件前面一改行号就全部漂移；让模型重写整个文件也是死路 [D3]。",
+    "exit": 0
+  },
+  {
+    "kind": "doc",
+    "question": "子 agent 为什么不准再派孙 agent？",
+    "seconds": 23.33,
+    "refused": false,
+    "sources": [
+      "article/05-parallel-and-subagents.md（片段 12）",
+      "article/05-parallel-and-subagents.md（片段 13）",
+      "README_CN.md（片段 21）"
+    ],
+    "trace": [
+      "retrieve:n=3",
+      "relevance:enough=True:generate_answer",
+      "answer"
+    ],
+    "answer": "子 agent 不准再派孙 agent，是为了避免递归派生失控，采用“一刀切”的安全策略。\n\n具体原因和机制：\n\n- 递归的 agent 容易失控：每多一层都在烧 token、占线程、加延迟，而且模型对“子任务该不该再拆”的判断并不可靠，可能陷入越拆越细、永远收不拢的无底洞。[D1]\n- 因此直接禁死递归：分身只能有一层，子 agent 要么自己搞定，要么失败返回，没有第三种走向。[D2]\n- 实现方式是派生子 agent 时浅拷贝工具实例，但刻意把 `agent` 工具本身移除，子 agent 手里没有“开分身”的能力；即便它去调 `agent`，也只会得到 `unknown tool 'agent'`。[D1][D2]\n- 这也与工具集按实例隔离的设计相咬合，测试 `test_agent_tool_scope_is_per_instance` 守的就是这条。[D2]\n- 文档总结为“少给一件工具，比事后立一条规矩干净得多”。[D3]",
+    "exit": 0
+  },
+  {
+    "kind": "doc",
+    "question": "会话名怎么做路径穿越防护？",
+    "seconds": 31.04,
+    "refused": false,
+    "sources": [
+      "article/06-session-and-cli.md（片段 12）",
+      "article/06-session-and-cli.md（片段 10）"
+    ],
+    "trace": [
+      "retrieve:n=3",
+      "relevance:enough=True:generate_answer",
+      "answer"
+    ],
+    "answer": "会话名采用两道原理不同的防线做纵深防御：一道管输入、一道管输出，因此不会同时失效 [D1]。\n\n**第一道关：规范化输入**\n- 先把反斜杠统一成正斜杠，堵住 Windows 的 `..\\..\\` 写法 [D2]。\n- 再用 `split(\"/\")[-1]` 只取最后一段，丢弃所有目录部分，于是 `../../etc/passwd` 变成 `passwd`，`/etc/shadow` 变成 `shadow` [D2]。\n- 然后把剩余字符中凡不是字母数字和 `._-` 的全部替换成 `-`，并砍掉过长部分，使恶意路径最终变成老老实实待在会话目录里的普通文件名 [D2]。\n\n**第二道关：校验输出落点**\n- 即使第一道关有疏漏，`_session_path` 在解析出最终路径后，还会明确检查其父目录就是会话目录本身 [D2]。\n\n**测试保障**\n- 这套防御被一串测试盯死，路径穿越、绝对路径、Windows 反斜杠、超长名字等攻击字符串逐个验证，进去都变成乖乖的文件名 [D1]。\n\n另外，`load_session` 对坏文件也做了克制处理，用 `try/except` 捕获 `JSONDecodeError`、`KeyError`、`OSError` [D1]。",
+    "exit": 0
+  },
+  {
+    "kind": "refuse",
+    "question": "CoreCoder 用的是哪个向量数据库？",
+    "seconds": 20.88,
+    "refused": true,
+    "sources": [],
+    "trace": [
+      "retrieve:n=3",
+      "relevance:enough=False:github",
+      "github:empty:n=0",
+      "refuse:no_context"
+    ],
+    "answer": "根据现有资料无法回答这个问题。",
+    "exit": 0
+  },
+  {
+    "kind": "refuse",
+    "question": "怎么用 Docker 部署？",
+    "seconds": 20.99,
+    "refused": true,
+    "sources": [],
+    "trace": [
+      "retrieve:n=3",
+      "relevance:enough=False:github",
+      "github:empty:n=0",
+      "refuse:no_context"
+    ],
+    "answer": "根据现有资料无法回答这个问题。",
+    "exit": 0
+  },
+  {
+    "kind": "refuse",
+    "question": "会话数据存在 Postgres 还是 Redis？",
+    "seconds": 20.33,
+    "refused": true,
+    "sources": [],
+    "trace": [
+      "retrieve:n=3",
+      "relevance:enough=False:github",
+      "github:empty:n=0",
+      "refuse:no_context"
+    ],
+    "answer": "根据现有资料无法回答这个问题。",
+    "exit": 0
+  },
+  {
+    "kind": "refuse",
+    "question": "模型的微调脚本在哪？",
+    "seconds": 20.77,
+    "refused": true,
+    "sources": [],
+    "trace": [
+      "retrieve:n=3",
+      "relevance:enough=False:github",
+      "github:empty:n=0",
+      "refuse:no_context"
+    ],
+    "answer": "根据现有资料无法回答这个问题。",
+    "exit": 0
+  },
+  {
+    "kind": "github",
+    "question": "edit_file 在 Windows 上会把行尾改成 CRLF 吗？",
+    "seconds": 20.71,
+    "refused": false,
+    "sources": [
+      "Issue #59: edit_file rewrites every line ending of the file it edits (LF to CRLF on Windows, CRLF to LF on Linux/macOS) (https://github.com/he-yufeng/CoreCoder/issues/59)",
+      "article/02-tools.md（片段 8）",
+      "article/02-tools.md（片段 9）"
+    ],
+    "trace": [
+      "retrieve:n=3",
+      "relevance:enough=False:github",
+      "github:ok:n=1",
+      "answer"
+    ],
+    "answer": "会。根据 issue 报告，`EditFileTool.execute` 用 `Path.read_text` 读、`Path.write_text` 写，两者都会做行尾转换，因此一次小改动就会重写整个文件的行尾：在 Windows 上，LF 文件会变成每行 CRLF [I1]。\n\n同一 issue 还列出两个相关副作用：在 Windows 上，`new_string` 里带 `\\r\\n` 会被写成 `\\r\\r\\n`，每处换行多出一个空行；而 `old_string` 里带 `\\r\\n` 则永远匹配不上，因为被匹配的文本里没有 `\\r` [I1]。\n\n补充一点：文档只说明了编辑前会检查文件是否为 UTF-8 文本 [D1][D3]，没有提到行尾处理，行尾问题的依据来自 issue [I1]。",
+    "exit": 0
+  },
+  {
+    "kind": "github",
+    "question": "temperature=0 时 Kimi 请求报 400 怎么办？",
+    "seconds": 19.69,
+    "refused": false,
+    "sources": [
+      "README_CN.md（片段 9）"
+    ],
+    "trace": [
+      "retrieve:n=3",
+      "relevance:enough=True:generate_answer",
+      "answer"
+    ],
+    "answer": "根据现有资料，CoreCoder 会自动处理这种情况：当服务以 400 错误指出 `temperature` 不受支持时，CoreCoder 会移除这个参数并重试，改用服务端支持的默认值；Kimi 那种不带引号的报错也能被识别，因此无需额外设置 `CORECODER_TEMPERATURE` [D1]。\n\n也就是说，遇到该 400 报错时不需要手动改配置，交给 CoreCoder 自动重试即可 [D1]。",
+    "exit": 0
+  },
+  {
+    "kind": "ambiguous",
+    "question": "上下文怎么处理？",
+    "seconds": 24.01,
+    "refused": false,
+    "sources": [
+      "article/04-context.md（片段 7）",
+      "article/02-tools.md（片段 7）"
+    ],
+    "trace": [
+      "retrieve:n=3",
+      "relevance:enough=True:generate_answer",
+      "answer"
+    ],
+    "answer": "根据现有资料，上下文处理主要分两层压缩策略：\n\n1. **截断工具输出时“留头尾、弃中间”**：因为关键信息常在两端——开头是任务目标，结尾是结果和报错，中间过程可以丢弃 [D2]。\n2. **对话历史摘要**：当上下文窗口涨到 70% 时，触发 `_summarize_old`，把旧对话整段交给模型生成摘要，只保留最近 8 条消息原样不动 [D2]。\n\n另外，在文件编辑场景中，工具要求 `old_string` 必须“恰好一次”匹配；若出现多次，会提示模型多带几行上下文使其唯一 [D1]。",
+    "exit": 0
+  },
+  {
+    "kind": "empty",
+    "question": "",
+    "seconds": 9.32,
+    "refused": false,
+    "sources": [],
+    "trace": [
+      "retrieve:empty",
+      "relevance:skip",
+      "refuse:empty_question"
+    ],
+    "answer": "问题不能为空。",
+    "exit": 0
+  }
+]

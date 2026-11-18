@@ -1,0 +1,82 @@
+[
+  {
+    "question": "CoreCoder 的 Agent 主循环是怎么运行的？",
+    "top3": [
+      {
+        "source": "article/05-parallel-and-subagents.md",
+        "chunk_id": 0,
+        "score": 0.7064028382301331
+      },
+      {
+        "source": "article/01-the-loop.md",
+        "chunk_id": 0,
+        "score": 0.7002589106559753
+      },
+      {
+        "source": "README_CN.md",
+        "chunk_id": 25,
+        "score": 0.6894842386245728
+      }
+    ]
+  },
+  {
+    "question": "CoreCoder 提供了哪些工具？",
+    "top3": [
+      {
+        "source": "article/03-llm-and-cost.md",
+        "chunk_id": 2,
+        "score": 0.6635236740112305
+      },
+      {
+        "source": "article/07-build-your-own.md",
+        "chunk_id": 0,
+        "score": 0.6483999490737915
+      },
+      {
+        "source": "README_CN.md",
+        "chunk_id": 43,
+        "score": 0.6467403173446655
+      }
+    ]
+  },
+  {
+    "question": "上下文太长时 CoreCoder 怎么办？",
+    "top3": [
+      {
+        "source": "article/00-index.md",
+        "chunk_id": 0,
+        "score": 0.6184906959533691
+      },
+      {
+        "source": "README_CN.md",
+        "chunk_id": 43,
+        "score": 0.6174927949905396
+      },
+      {
+        "source": "article/03-llm-and-cost.md",
+        "chunk_id": 2,
+        "score": 0.6149208545684814
+      }
+    ]
+  },
+  {
+    "question": "CoreCoder 有没有实现 RAG？",
+    "top3": [
+      {
+        "source": "README_CN.md",
+        "chunk_id": 43,
+        "score": 0.6114406585693359
+      },
+      {
+        "source": "article/03-llm-and-cost.md",
+        "chunk_id": 2,
+        "score": 0.5879722237586975
+      },
+      {
+        "source": "article/07-build-your-own.md",
+        "chunk_id": 0,
+        "score": 0.5864120721817017
+      }
+    ]
+  }
+]

@@ -1,0 +1,1052 @@
+{
+  "generated_at": "2026-11-18T14:50:24",
+  "retrieval": {
+    "total": 24,
+    "top1": 0.625,
+    "top3": 0.875,
+    "top5": 1.0,
+    "rows": [
+      {
+        "id": "doc-01",
+        "question": "CoreCoder 和 Claude Code、aider 在代码量上怎么对比？",
+        "expected": [
+          "README_CN.md"
+        ],
+        "retrieved": [
+          "article/00-index.md",
+          "article/01-the-loop.md",
+          "article/00-index.md",
+          "article/05-parallel-and-subagents.md",
+          "README_CN.md"
+        ],
+        "rank": 5
+      },
+      {
+        "id": "doc-02",
+        "question": "哪些工具会先停下来等用户授权？",
+        "expected": [
+          "README_CN.md"
+        ],
+        "retrieved": [
+          "article/05-parallel-and-subagents.md",
+          "README_CN.md",
+          "article/08-extensibility.md",
+          "article/08-extensibility.md",
+          "article/01-the-loop.md"
+        ],
+        "rank": 2
+      },
+      {
+        "id": "doc-03",
+        "question": "计划模式开着的时候，改动类调用会怎样？",
+        "expected": [
+          "README_CN.md",
+          "article/04-context.md"
+        ],
+        "retrieved": [
+          "article/02-tools.md",
+          "README_CN.md",
+          "README_CN.md",
+          "article/01-the-loop.md",
+          "article/08-extensibility.md"
+        ],
+        "rank": 2
+      },
+      {
+        "id": "doc-04",
+        "question": "这套源码导读建议按什么顺序读？",
+        "expected": [
+          "article/00-index.md"
+        ],
+        "retrieved": [
+          "README_CN.md",
+          "README_CN.md",
+          "README_CN.md",
+          "article/00-index.md",
+          "article/claude-code-source-analysis.md"
+        ],
+        "rank": 4
+      },
+      {
+        "id": "doc-05",
+        "question": "为什么要先把 Claude Code 压到一千多行再读？",
+        "expected": [
+          "article/00-index.md"
+        ],
+        "retrieved": [
+          "article/00-index.md",
+          "article/04-context.md",
+          "article/claude-code-source-analysis.md",
+          "article/01-the-loop.md",
+          "README_CN.md"
+        ],
+        "rank": 1
+      },
+      {
+        "id": "doc-06",
+        "question": "主循环为什么用 for 而不是 while(true)？",
+        "expected": [
+          "article/01-the-loop.md"
+        ],
+        "retrieved": [
+          "article/01-the-loop.md",
+          "README_CN.md",
+          "README_CN.md",
+          "article/02-tools.md",
+          "article/01-the-loop.md"
+        ],
+        "rank": 1
+      },
+      {
+        "id": "doc-07",
+        "question": "工具执行结果在对话历史里长什么样？",
+        "expected": [
+          "article/01-the-loop.md"
+        ],
+        "retrieved": [
+          "article/01-the-loop.md",
+          "article/02-tools.md",
+          "article/05-parallel-and-subagents.md",
+          "article/02-tools.md",
+          "article/06-session-and-cli.md"
+        ],
+        "rank": 1
+      },
+      {
+        "id": "doc-08",
+        "question": "模型执行到一半被 Ctrl+C 打断，未回复的工具调用怎么处理？",
+        "expected": [
+          "article/01-the-loop.md"
+        ],
+        "retrieved": [
+          "README_CN.md",
+          "article/01-the-loop.md",
+          "article/01-the-loop.md",
+          "article/01-the-loop.md",
+          "README_CN.md"
+        ],
+        "rank": 2
+      },
+      {
+        "id": "doc-09",
+        "question": "edit_file 为什么要唯一匹配，匹配到多处怎么办？",
+        "expected": [
+          "article/02-tools.md"
+        ],
+        "retrieved": [
+          "article/01-the-loop.md",
+          "article/claude-code-source-analysis.md",
+          "article/02-tools.md",
+          "article/02-tools.md",
+          "article/02-tools.md"
+        ],
+        "rank": 3
+      },
+      {
+        "id": "doc-10",
+        "question": "bash 工具的正则黑名单能拦住哪些危险命令？",
+        "expected": [
+          "article/02-tools.md"
+        ],
+        "retrieved": [
+          "article/02-tools.md",
+          "article/02-tools.md",
+          "article/02-tools.md",
+          "article/02-tools.md",
+          "article/02-tools.md"
+        ],
+        "rank": 1
+      },
+      {
+        "id": "doc-11",
+        "question": "为什么先校验参数形状再校验安全？",
+        "expected": [
+          "article/02-tools.md"
+        ],
+        "retrieved": [
+          "article/02-tools.md",
+          "article/06-session-and-cli.md",
+          "article/01-the-loop.md",
+          "article/02-tools.md",
+          "article/04-context.md"
+        ],
+        "rank": 1
+      },
+      {
+        "id": "doc-12",
+        "question": "流式返回里被切成多段的工具调用参数怎么拼回去？",
+        "expected": [
+          "article/03-llm-and-cost.md"
+        ],
+        "retrieved": [
+          "README_CN.md",
+          "article/01-the-loop.md",
+          "article/02-tools.md",
+          "article/03-llm-and-cost.md",
+          "article/04-context.md"
+        ],
+        "rank": 4
+      },
+      {
+        "id": "doc-13",
+        "question": "限流、超时和 5xx 分别怎么退避重试？",
+        "expected": [
+          "article/03-llm-and-cost.md"
+        ],
+        "retrieved": [
+          "article/03-llm-and-cost.md",
+          "README_CN.md",
+          "article/03-llm-and-cost.md",
+          "article/03-llm-and-cost.md",
+          "article/claude-code-source-analysis.md"
+        ],
+        "rank": 1
+      },
+      {
+        "id": "doc-14",
+        "question": "不兼容 OpenAI 接口的模型走哪个后端？",
+        "expected": [
+          "article/03-llm-and-cost.md"
+        ],
+        "retrieved": [
+          "article/03-llm-and-cost.md",
+          "article/03-llm-and-cost.md",
+          "article/03-llm-and-cost.md",
+          "article/03-llm-and-cost.md",
+          "README_CN.md"
+        ],
+        "rank": 1
+      },
+      {
+        "id": "doc-15",
+        "question": "上下文压缩的三层分别在多少百分比触发？",
+        "expected": [
+          "article/04-context.md"
+        ],
+        "retrieved": [
+          "article/04-context.md",
+          "article/04-context.md",
+          "article/04-context.md",
+          "article/04-context.md",
+          "article/03-llm-and-cost.md"
+        ],
+        "rank": 1
+      },
+      {
+        "id": "doc-16",
+        "question": "什么情况下会产生孤儿 tool 消息，API 为什么报错？",
+        "expected": [
+          "article/04-context.md"
+        ],
+        "retrieved": [
+          "article/04-context.md",
+          "article/04-context.md",
+          "article/05-parallel-and-subagents.md",
+          "article/04-context.md",
+          "article/01-the-loop.md"
+        ],
+        "rank": 1
+      },
+      {
+        "id": "doc-17",
+        "question": "硬折叠这一层最后保留哪几条消息？",
+        "expected": [
+          "article/04-context.md"
+        ],
+        "retrieved": [
+          "article/04-context.md",
+          "article/04-context.md",
+          "article/04-context.md",
+          "article/04-context.md",
+          "article/04-context.md"
+        ],
+        "rank": 1
+      },
+      {
+        "id": "doc-18",
+        "question": "并行执行 bash 时工作目录为什么用线程本地变量？",
+        "expected": [
+          "article/05-parallel-and-subagents.md"
+        ],
+        "retrieved": [
+          "article/05-parallel-and-subagents.md",
+          "article/05-parallel-and-subagents.md",
+          "article/05-parallel-and-subagents.md",
+          "article/05-parallel-and-subagents.md",
+          "article/05-parallel-and-subagents.md"
+        ],
+        "rank": 1
+      },
+      {
+        "id": "doc-19",
+        "question": "子 agent 为什么不准再派孙 agent？",
+        "expected": [
+          "article/05-parallel-and-subagents.md"
+        ],
+        "retrieved": [
+          "article/05-parallel-and-subagents.md",
+          "article/05-parallel-and-subagents.md",
+          "README_CN.md",
+          "article/01-the-loop.md",
+          "article/05-parallel-and-subagents.md"
+        ],
+        "rank": 1
+      },
+      {
+        "id": "doc-20",
+        "question": "恶意会话名怎么做路径穿越防护？",
+        "expected": [
+          "article/06-session-and-cli.md"
+        ],
+        "retrieved": [
+          "article/06-session-and-cli.md",
+          "article/06-session-and-cli.md",
+          "article/04-context.md",
+          "article/02-tools.md",
+          "article/07-build-your-own.md"
+        ],
+        "rank": 1
+      },
+      {
+        "id": "doc-21",
+        "question": "一次性模式没人可问时，改动类调用怎么处理？",
+        "expected": [
+          "article/06-session-and-cli.md"
+        ],
+        "retrieved": [
+          "README_CN.md",
+          "article/06-session-and-cli.md",
+          "article/02-tools.md",
+          "article/01-the-loop.md",
+          "article/08-extensibility.md"
+        ],
+        "rank": 2
+      },
+      {
+        "id": "doc-22",
+        "question": "fork 之后先跑哪条命令确认基线测试全绿？",
+        "expected": [
+          "article/07-build-your-own.md"
+        ],
+        "retrieved": [
+          "article/07-build-your-own.md",
+          "article/07-build-your-own.md",
+          "README_CN.md",
+          "article/02-tools.md",
+          "article/01-the-loop.md"
+        ],
+        "rank": 1
+      },
+      {
+        "id": "doc-23",
+        "question": "pre 钩子用哪个退出码否决调用，stderr 去哪了？",
+        "expected": [
+          "article/08-extensibility.md"
+        ],
+        "retrieved": [
+          "README_CN.md",
+          "article/08-extensibility.md",
+          "article/08-extensibility.md",
+          "README_CN.md",
+          "article/02-tools.md"
+        ],
+        "rank": 2
+      },
+      {
+        "id": "doc-24",
+        "question": "计划模式用什么压住整个权限层？",
+        "expected": [
+          "article/08-extensibility.md"
+        ],
+        "retrieved": [
+          "article/08-extensibility.md",
+          "README_CN.md",
+          "article/04-context.md",
+          "article/07-build-your-own.md",
+          "article/04-context.md"
+        ],
+        "rank": 1
+      }
+    ]
+  },
+  "answer": {
+    "total": 36,
+    "refusal_precision": 1.0,
+    "false_refusal_rate": 0.0,
+    "citation_coverage": 1.0,
+    "rows": [
+      {
+        "id": "doc-01",
+        "category": "doc",
+        "question": "CoreCoder 和 Claude Code、aider 在代码量上怎么对比？",
+        "answer": "根据现有资料，只能对比 CoreCoder 和 Claude Code 的代码量，资料中没有提到 aider 的代码量。\n\n- CoreCoder 是一个“核心一千四百行出头”的纯 Python 开源项目 [D1]。\n- Claude Code 的代码量在“几十万行”的量级，仅一个负责跑 shell 命令的 BashTool 就上千行 [D1]。\n- 两者的循环骨架几乎重合，真正的差距在循环之外的错误恢复等防护层：Claude Code 的防护层厚得多，而 CoreCoder 把这些拆到别处、压成几十行 [D2]。\n\n因此，CoreCoder 的定位是把 agent 骨架压缩到约 1400 行，便于阅读；Claude Code 则是几十万行的生产级实现 [D1][D2]。至于 aider 的代码量，根据现有资料无法回答。",
+        "refused": false,
+        "expect_refusal": false,
+        "sources": [
+          "article/00-index.md（片段 0）",
+          "article/01-the-loop.md（片段 16）"
+        ],
+        "citation_count": 2,
+        "citation_ok": true,
+        "trace": [
+          "retrieve:n=3",
+          "relevance:enough=True:generate_answer",
+          "answer"
+        ]
+      },
+      {
+        "id": "doc-02",
+        "category": "doc",
+        "question": "哪些工具会先停下来等用户授权？",
+        "answer": "根据现有资料，**没有明确列出“会先停下来等用户授权”的具体工具清单**，只能得到两点相关机制：\n\n- 在 plan mode 下，非只读的工具调用会被拒绝，模型需改用只读工具调研、给出方案后停住，等用户输入 `approve` 或 `/plan` 才继续 [D3]。\n- 并发执行时，交互式授权提示会被串行化，避免确认问题交错打印、漏账 [D2]。\n\n但资料未点名哪些具体工具会触发授权等待，因此无法给出工具列表。",
+        "refused": false,
+        "expect_refusal": false,
+        "sources": [
+          "article/08-extensibility.md（片段 10）",
+          "README_CN.md（片段 23）"
+        ],
+        "citation_count": 2,
+        "citation_ok": true,
+        "trace": [
+          "retrieve:n=3",
+          "relevance:enough=True:generate_answer",
+          "answer"
+        ]
+      },
+      {
+        "id": "doc-03",
+        "category": "doc",
+        "question": "计划模式开着的时候，改动类调用会怎样？",
+        "answer": "计划模式开着时，所有改动类调用都会被当场拒绝，而且这道闸的权限最高，连 `--yes` 也压不过它 [D1][D3]。\n\n具体细节：\n\n- 判断逻辑是 `self.plan_mode and tc.name not in Permission.READ_ONLY`，命中就拒绝 [D1]。\n- 被拒的包括写文件、编辑、bash、MCP 工具、子 agent 等一切改动类调用 [D3]。\n- 拒绝理由不是冷冰冰的报错，而是作为普通工具结果回给模型，并解释 plan 模式是什么，让模型用只读工具继续摸底、先给出编号计划 [D1][D3]。\n- 计划确认后，敲 `approve`（或再敲一次 `/plan`）即可交回执行权 [D3]。\n- 机制上只是在授权闸前面多了一支拒绝分支，授权闸本身没动；不落盘计划文件，会话间也不记录 [D3]。",
+        "refused": false,
+        "expect_refusal": false,
+        "sources": [
+          "article/02-tools.md（片段 17）",
+          "README_CN.md（片段 33）"
+        ],
+        "citation_count": 2,
+        "citation_ok": true,
+        "trace": [
+          "retrieve:n=3",
+          "relevance:enough=True:generate_answer",
+          "answer"
+        ]
+      },
+      {
+        "id": "doc-04",
+        "category": "doc",
+        "question": "这套源码导读建议按什么顺序读？",
+        "answer": "建议顺序：**先跑一次建立体感 → 按导读顺序读前六篇（导言、01、02、03……）→ 第七篇学 fork → 第八篇学扩展**。\n\n- 读源码之前，先让它在你机器上跑一次，建立体感 [D3]。\n- 导读本身按“导言 → 01 主循环 → 02 工具系统 → 03 接入大模型与成本”的顺序列出 [D2]。\n- 整体安排是：前六篇带你读懂，第七篇带你 fork，第八篇讲怎么不动主循环地扩展它 [D2]。\n- 不过导读也明确说“哪篇先读都行”，所以这个顺序不是硬性要求 [D2]。",
+        "refused": false,
+        "expect_refusal": false,
+        "sources": [
+          "README_CN.md（片段 6）",
+          "README_CN.md（片段 25）"
+        ],
+        "citation_count": 2,
+        "citation_ok": true,
+        "trace": [
+          "retrieve:n=3",
+          "relevance:enough=True:generate_answer",
+          "answer"
+        ]
+      },
+      {
+        "id": "doc-05",
+        "category": "doc",
+        "question": "为什么要先把 Claude Code 压到一千多行再读？",
+        "answer": "因为 Claude Code 本体太大，直接逐行读几乎读不完，而 agent 的核心骨架其实并不复杂，复杂的是工程化后为真实世界兜底的边角逻辑，这些边角摊在几十万行代码里会让人看不到骨架。[D1]\n\n具体来说：Claude Code 的代码量在几十万行量级，光一个负责跑 shell 命令的 BashTool 就上千行，真要逐行读完，多数人会在第三个文件就关掉编辑器。[D1] 泄露源码的规模也印证了这一点：解压后有 1903 个文件、51 万行 TypeScript。[D3] 而 CoreCoder 做的事，正是把这套骨架压到一千四百行出头的纯 Python，便于先看清结构。[D1]",
+        "refused": false,
+        "expect_refusal": false,
+        "sources": [
+          "article/00-index.md（片段 0）",
+          "article/claude-code-source-analysis.md（片段 0）"
+        ],
+        "citation_count": 2,
+        "citation_ok": true,
+        "trace": [
+          "retrieve:n=3",
+          "relevance:enough=True:generate_answer",
+          "answer"
+        ]
+      },
+      {
+        "id": "doc-06",
+        "category": "doc",
+        "question": "主循环为什么用 for 而不是 while(true)？",
+        "answer": "主循环用 `for _ in range(self.max_rounds)` 而不是 `while(true)`，是为了给循环加一道硬上限，防止模型陷入自我循环时无限消耗 token [D1]。\n\n具体来说：\n\n- 这是有意设计的“刹车”，不是风格差异。如果模型陷入“读文件、发现不对、再读、还是不对”的死循环，没有上限就会一直烧 token，直到手动 Ctrl+C 或账单失控 [D1]。\n- `max_rounds` 默认 50，是经验值，正常任务远用不到；真撞到上限，循环会返回 `(reached maximum tool-call rounds)`，把控制权交还用户 [D1]。\n- 代码骨架也体现了这一点：`for _ in range(self.max_rounds)` 处注释为“循环有上限，跑不飞”，模型不再请求工具时直接返回回答 [D2]。\n\n作为对比，资料提到 Claude Code 的循环写成 `while(true)`，靠内部预算和错误恢复退出 [D1]。",
+        "refused": false,
+        "expect_refusal": false,
+        "sources": [
+          "article/01-the-loop.md（片段 5）",
+          "README_CN.md（片段 17）"
+        ],
+        "citation_count": 2,
+        "citation_ok": true,
+        "trace": [
+          "retrieve:n=3",
+          "relevance:enough=True:generate_answer",
+          "answer"
+        ]
+      },
+      {
+        "id": "doc-07",
+        "category": "doc",
+        "question": "工具执行结果在对话历史里长什么样？",
+        "answer": "根据现有资料，工具执行结果会以一条 `tool` 消息的形式追加回对话历史，然后进入下一轮再问模型。[D1]\n\n细节上，工具的输出是文本：`Tool.execute` 的约定就是“运行工具并返回文本结果”（return a text result）。[D2] 主循环在模型返回工具调用后去执行，并把每个工具的输出作为 `tool` 消息追加回历史。[D1]",
+        "refused": false,
+        "expect_refusal": false,
+        "sources": [
+          "article/01-the-loop.md（片段 4）",
+          "article/02-tools.md（片段 1）"
+        ],
+        "citation_count": 2,
+        "citation_ok": true,
+        "trace": [
+          "retrieve:n=3",
+          "relevance:enough=True:generate_answer",
+          "answer"
+        ]
+      },
+      {
+        "id": "doc-08",
+        "category": "doc",
+        "question": "模型执行到一半被 Ctrl+C 打断，未回复的工具调用怎么处理？",
+        "answer": "被 Ctrl+C 打断后，对尚未回复的工具调用补一条占位消息，内容为 `\"[interrupted]\"`，让历史保持完整、可以继续对话。[D3]\n\n具体做法是：先收集已经回复过的工具调用 id，只给缺失的那些补占位，已经跑完的工具结果不会被覆盖或重复填。[D3] 这一回填逻辑属于循环骨架的一部分，与并行执行一并算上也只有四十来行。[D1]\n\n这样处理后，用户中断之后还能接着聊，历史是干净的。[D3]",
+        "refused": false,
+        "expect_refusal": false,
+        "sources": [
+          "article/01-the-loop.md（片段 15）",
+          "README_CN.md（片段 18）"
+        ],
+        "citation_count": 2,
+        "citation_ok": true,
+        "trace": [
+          "retrieve:n=3",
+          "relevance:enough=True:generate_answer",
+          "answer"
+        ]
+      },
+      {
+        "id": "doc-09",
+        "category": "doc",
+        "question": "edit_file 为什么要唯一匹配，匹配到多处怎么办？",
+        "answer": "**结论：** edit_file 要求 `old_string` 在文件中恰好匹配一次，是为了消除“到底改哪一处”的歧义；如果匹配到多处，工具会拒绝执行，并提示模型补充上下文，使这段引用在全文里唯一。[D3]\n\n具体细节：\n\n- **为什么必须唯一**：如果原文出现不止一次，工具无法确定模型想改的是哪一处，因此不会猜测，也不会随便选一处修改。[D3]\n- **匹配到多处怎么办**：工具会拒绝执行，并返回类似“这段文字出现了 N 次，多带几行上下文让它唯一”的提示；这不仅是报错，也是在教模型如何修正请求。下一轮模型会自觉把 `old_string` 扩展到包含足够上下文，直到它在全文里唯一。[D3]\n- **一次都没匹配到**：说明模型记错了内容，工具同样不会猜测，而是把文件开头贴回去，让模型重新对照。[D3]\n- **设计意义**：这个约束把“改文件”从模糊问题变成确定问题——模型不需要懂行号、不需要会算偏移，只需原样引用想改的代码，由工具保证引用没有歧义。[D3]",
+        "refused": false,
+        "expect_refusal": false,
+        "sources": [
+          "article/02-tools.md（片段 7）"
+        ],
+        "citation_count": 1,
+        "citation_ok": true,
+        "trace": [
+          "retrieve:n=3",
+          "relevance:enough=True:generate_answer",
+          "answer"
+        ]
+      },
+      {
+        "id": "doc-10",
+        "category": "doc",
+        "question": "bash 工具的正则黑名单能拦住哪些危险命令？",
+        "answer": "根据现有资料，这张正则黑名单能拦住的危险命令包括：\n\n- 针对根目录或家目录的递归删除，例如 `rm -r /`、`rm -r ~`、`rm -r $HOME`（force 标志可选）[D2]\n- 同时带递归（`-r`/`-R`）和强制（`-f`）标志的 `rm`，标志顺序和间距不限 [D2]\n- `mkfs` 类格式化文件系统命令 [D2]\n\n需要注意，文档只展示了黑名单的开头部分，`mkfs` 之后可能还有条目，但现有资料未给出 [D2]。\n\n另外，这张黑名单**不是安全边界**，只是一道防手滑的闸：它挡得住模型一时糊涂生成的最常见、最直白的灾难命令，挡不住 base64 编码、变量拼接等蓄意绕过；真正的安全需要靠沙箱 [D3]。",
+        "refused": false,
+        "expect_refusal": false,
+        "sources": [
+          "article/02-tools.md（片段 11）",
+          "article/02-tools.md（片段 14）"
+        ],
+        "citation_count": 2,
+        "citation_ok": true,
+        "trace": [
+          "retrieve:n=3",
+          "relevance:enough=True:generate_answer",
+          "answer"
+        ]
+      },
+      {
+        "id": "doc-11",
+        "category": "doc",
+        "question": "为什么先校验参数形状再校验安全？",
+        "answer": "先校验参数形状、再校验安全，是为了把两类不同性质的失败分开，让每一关都能给出精准反馈，模型也能针对性修正 [D1][D3]。\n\n具体原因：\n\n1. **区分“参数错”和“工具内部错”**：如果直接调用 `tool.execute(**tc.arguments)`，一旦抛出 `TypeError`，就分不清是模型给的参数对不上函数签名（模型的错，该让它改），还是工具内部代码自己抛了 `TypeError`（工具的 bug，与参数无关）[D3]。先用 `inspect.signature().bind()` 只检查实参能否合法绑定到形参、不真正执行函数，就能把“参数能不能对上签名”单独拎出来判断：绑不上是参数问题，绑得上之后再调用时出错则是工具内部问题 [D3]。\n\n2. **两关各给各的精准反馈**：第一道在 `agent._exec_tool` 里验“形状”（参数能否对上函数签名），第二道在工具内部验“该不该真做”（如 `bash` 的危险命令检测、`edit_file` 的 UTF-8 判断）[D1]。这对应 Claude Code 的 `validateInput` 和 `checkPermissions`：一个验输入合不合法，一个验操作允不允许 [D1]。把“格式对不对”和“该不该做”分成两关，各自的失败能给出各自精准的反馈；一个混在一起的大 try-except 做不到这种精度 [D1]。\n\n补充：资料还提到另一层“纵深防御”思路——两道关用完全不同的原理（一个管输入、一个管输出），不会一起失效 [D2]。不过该段讲的是路径校验的输出落点防线，与本题的“形状 vs 安全”两阶段是不同层面的设计。",
+        "refused": false,
+        "expect_refusal": false,
+        "sources": [
+          "article/02-tools.md（片段 16）",
+          "article/01-the-loop.md（片段 9）",
+          "article/06-session-and-cli.md（片段 12）"
+        ],
+        "citation_count": 3,
+        "citation_ok": true,
+        "trace": [
+          "retrieve:n=3",
+          "relevance:enough=True:generate_answer",
+          "answer"
+        ]
+      },
+      {
+        "id": "doc-12",
+        "category": "doc",
+        "question": "流式返回里被切成多段的工具调用参数怎么拼回去？",
+        "answer": "根据现有资料，只能确认“要按顺序拼回去”这一原则，具体拼接实现资料里没有展开。\n\n- 流式返回中，一个工具调用的参数会被切成好几段先后送到，需要按顺序拼回去 [D1]。\n- 这也是 `llm.py` 成为引擎里最大文件的原因之一：除了参数分段拼接，还要处理半截 JSON、usage 为 null、429/超时/连接中断/5xx 的退避重试，以及其余 4xx 直接抛出 [D1]。\n\n至于拼接用的具体数据结构、缓冲区或代码，根据现有资料无法回答。",
+        "refused": false,
+        "expect_refusal": false,
+        "sources": [
+          "README_CN.md（片段 18）"
+        ],
+        "citation_count": 1,
+        "citation_ok": true,
+        "trace": [
+          "retrieve:n=3",
+          "relevance:enough=True:generate_answer",
+          "answer"
+        ]
+      },
+      {
+        "id": "doc-13",
+        "category": "doc",
+        "question": "限流、超时和 5xx 分别怎么退避重试？",
+        "answer": "根据现有资料，限流、超时和 5xx 走的是同一套指数退避逻辑，并没有分别设计不同的退避策略：\n\n- 限流（429）、超时、连接中断这类瞬时故障，按 1 秒、2 秒、4 秒的指数退避重试，最多三次，仍失败就抛出 [D1][D2]。\n- 服务端 5xx 同样重试 [D1][D3]。\n- 客户端 4xx（参数错误、鉴权失败等）不重试，直接抛出 [D1][D2]。\n- 重试包住的是整个请求，而不只是建立连接，因此已经开始输出内容的流中途断掉也会整体重试 [D2]。\n- 代码中对 `status_code` 用 `getattr` 防御性读取，以兼容没有该属性的基类 `APIError` [D1][D3]。\n\n资料只说明三者共用上述退避与重试上限，未给出针对限流、超时、5xx 各自不同的退避参数或策略。",
+        "refused": false,
+        "expect_refusal": false,
+        "sources": [
+          "article/03-llm-and-cost.md（片段 11）",
+          "README_CN.md（片段 19）",
+          "article/03-llm-and-cost.md（片段 12）"
+        ],
+        "citation_count": 3,
+        "citation_ok": true,
+        "trace": [
+          "retrieve:n=3",
+          "relevance:enough=True:generate_answer",
+          "answer"
+        ]
+      },
+      {
+        "id": "doc-14",
+        "category": "doc",
+        "question": "不兼容 OpenAI 接口的模型走哪个后端？",
+        "answer": "不兼容 OpenAI 接口的模型走 `LiteLLM` 后端。\n\n`LiteLLM` 子类是专门为那些不走 OpenAI 兼容接口的 provider 准备的“逃生通道”：它继承 `LLM`，但绕开父类构造函数中创建 openai client 的步骤，改为把请求交给 `litellm` 库路由，而 litellm 支持上百家 provider [D3]。相比之下，主力 `LLM` 类只是 openai SDK 的薄包装，适用于兼容 `/v1/chat/completions` 的服务 [D1][D2]。",
+        "refused": false,
+        "expect_refusal": false,
+        "sources": [
+          "article/03-llm-and-cost.md（片段 15）",
+          "article/03-llm-and-cost.md（片段 1）",
+          "article/03-llm-and-cost.md（片段 0）"
+        ],
+        "citation_count": 3,
+        "citation_ok": true,
+        "trace": [
+          "retrieve:n=3",
+          "relevance:enough=True:generate_answer",
+          "answer"
+        ]
+      },
+      {
+        "id": "doc-15",
+        "category": "doc",
+        "question": "上下文压缩的三层分别在多少百分比触发？",
+        "answer": "三层压缩的触发阈值分别是：50%、70%、90% [D3]。\n\n- 50%：截断臃肿的工具输出（`_snip_at`）[D3]\n- 70%：用 LLM 摘要旧对话（`_summarize_at`）[D3]\n- 90%：硬折叠，作为最后手段（`_collapse_at`）[D3][D1]\n\n调度时从轻到重按需施加，每施加一层就重新估算 token，够了就停 [D3]。",
+        "refused": false,
+        "expect_refusal": false,
+        "sources": [
+          "article/04-context.md（片段 1）",
+          "article/04-context.md（片段 14）"
+        ],
+        "citation_count": 2,
+        "citation_ok": true,
+        "trace": [
+          "retrieve:n=3",
+          "relevance:enough=True:generate_answer",
+          "answer"
+        ]
+      },
+      {
+        "id": "doc-16",
+        "category": "doc",
+        "question": "什么情况下会产生孤儿 tool 消息，API 为什么报错？",
+        "answer": "**结论：** 当上下文压缩的切分点落在一次工具调用中间时，会产生孤儿 tool 消息；API 报错是因为带 `tool_calls` 的 assistant 消息后面缺少配对的 `tool` 回复，API 会直接拒绝。[D1][D2]\n\n细节：\n\n- 孤儿 tool 消息依赖一条跨消息的不变式，平时不发作，只在切分点落在工具调用中间时才会暴露。[D1]\n- 压缩时，旧对话会被替换成一条摘要 user 消息和一条 assistant 回应，然后接上原封不动的近期消息；如果切分点正好落在工具调用中间，配对关系就会被破坏。[D2]\n- 规则是：一条带 `tool_calls` 的 assistant 消息，后面必须跟着配对的 `tool` 回复，少一个 API 都会拒。[D2]\n\n资料未给出 API 的具体错误码或报错文本，因此无法进一步说明报错细节。",
+        "refused": false,
+        "expect_refusal": false,
+        "sources": [
+          "article/04-context.md（片段 16）",
+          "article/04-context.md（片段 9）"
+        ],
+        "citation_count": 2,
+        "citation_ok": true,
+        "trace": [
+          "retrieve:n=3",
+          "relevance:enough=True:generate_answer",
+          "answer"
+        ]
+      },
+      {
+        "id": "doc-17",
+        "category": "doc",
+        "question": "硬折叠这一层最后保留哪几条消息？",
+        "answer": "根据现有资料，硬折叠（`_hard_collapse`）最后只保留**最后几条消息加一个摘要**，其余全部折叠掉；但资料没有给出“几条”的具体数字。[D1]\n\n补充细节：这一层是窗口涨到 90% 时的“急刹车”，属于最后手段，很少触发；它同样走 `_safe_split`，以保证不留下孤儿 tool 回复。[D1] 作为对照，第二层 `_summarize_old` 是保留最近 8 条消息原样不动，但硬折叠的具体保留条数在资料中未说明。[D2]",
+        "refused": false,
+        "expect_refusal": false,
+        "sources": [
+          "article/04-context.md（片段 14）",
+          "article/04-context.md（片段 7）"
+        ],
+        "citation_count": 2,
+        "citation_ok": true,
+        "trace": [
+          "retrieve:n=3",
+          "relevance:enough=True:generate_answer",
+          "answer"
+        ]
+      },
+      {
+        "id": "doc-18",
+        "category": "doc",
+        "question": "并行执行 bash 时工作目录为什么用线程本地变量？",
+        "answer": "结论：因为 bash 需要跨命令记住 `cd` 后的工作目录，而并行执行时多个 bash 调用会在不同线程中同时读写这份状态；用线程本地变量可以让每个线程拥有独立的 cwd 副本，避免共享全局变量导致的竞态。[D1][D2][D3]\n\n细节：\n\n- bash 必须在多次命令之间记住当前目录，所以需要把 cwd 存在某个地方；最直觉的写法是模块级全局变量 `_cwd`。[D2][D3]\n- 串行执行时这没问题，因为一次只有一个 bash 在跑，读写全局变量井然有序。[D2][D3]\n- 但进入并行分支后，模型可能同时返回两个 bash 调用，它们在不同线程里同时读写同一个 `_cwd`：一个刚改成目录 A，另一个可能读到 A，或把它覆盖成 B，两个本应独立的命令因此纠缠在一起，形成典型的竞态——平时很难复现，只在并发时序不巧时出错。[D2]\n- 因此 CoreCoder 改用 `threading.local()`：它给每个线程一份独立副本，线程之间互不可见；读时取当前线程自己的 cwd，没有就退回进程 cwd，写时只改当前线程自己的那份。[D1][D2]\n- 这也体现了一个更一般的点：给 agent 加并行，就等于给所有带可变状态的工具增加了并发正确性要求；这种隐患往往跨文件才看得出来。[D1]",
+        "refused": false,
+        "expect_refusal": false,
+        "sources": [
+          "article/05-parallel-and-subagents.md（片段 6）",
+          "article/05-parallel-and-subagents.md（片段 5）",
+          "article/05-parallel-and-subagents.md（片段 4）"
+        ],
+        "citation_count": 3,
+        "citation_ok": true,
+        "trace": [
+          "retrieve:n=3",
+          "relevance:enough=True:generate_answer",
+          "answer"
+        ]
+      },
+      {
+        "id": "doc-19",
+        "category": "doc",
+        "question": "子 agent 为什么不准再派孙 agent？",
+        "answer": "结论：因为递归派生 agent 容易失控，所以直接禁止，让子 agent 只能自己完成或失败返回。\n\n具体原因和实现方式：\n\n- 递归会层层派生，每一层都在消耗 token、占用线程、增加延迟；而且模型对“子任务是否还该继续拆”的判断并不可靠，可能越拆越细、永远收不拢。因此，直接禁止递归是最省心的安全策略：子 agent 只有一层，要么自己搞定，要么失败返回，没有第三种走向。[D1][D2]\n- 实现上，派生子 agent 时工具实例会浅拷贝，但 `agent` 工具本身被刻意移除，子 agent 手里没有“开分身”的能力。[D1]\n- 子 agent 的工具集只比父 agent 少 `agent` 这一样；即便它在历史里见过 `agent` 这个名字，调用也只会得到 `unknown tool 'agent'`。[D2][D3]\n- 由于 `_tool_by_name` 是实例级的，每个 agent 认哪些工具是它自己的事，所以“从子 agent 集合里摘掉 agent 工具”才能真正生效。[D2]",
+        "refused": false,
+        "expect_refusal": false,
+        "sources": [
+          "article/05-parallel-and-subagents.md（片段 12）",
+          "article/05-parallel-and-subagents.md（片段 13）",
+          "README_CN.md（片段 21）"
+        ],
+        "citation_count": 3,
+        "citation_ok": true,
+        "trace": [
+          "retrieve:n=3",
+          "relevance:enough=True:generate_answer",
+          "answer"
+        ]
+      },
+      {
+        "id": "doc-20",
+        "category": "doc",
+        "question": "恶意会话名怎么做路径穿越防护？",
+        "answer": "根据现有资料，恶意会话名的路径穿越防护采用了两道原理不同的防线（纵深防御）：\n\n1. **第一道：规范化输入（只保留最后一段文件名）**\n   - 先把反斜杠统一成正斜杠，堵住 Windows 的 `..\\..\\` 写法；再用 `split(\"/\")[-1]` 只取最后一段，丢弃所有目录部分。例如 `../../etc/passwd` 会变成 `passwd`，`/etc/shadow` 会变成 `shadow`。[D2]\n   - 然后把剩余字符中凡不是字母数字和 `._-` 的，全部替换成 `-`，并截断过长部分，使恶意路径最终变成会话目录里的普通文件名。[D2]\n\n2. **第二道：校验输出落点（父目录必须是会话目录）**\n   - 即使第一道有疏漏，`_session_path` 在解析出最终路径后，会明确检查其父目录就是会话目录本身（将路径与 `SESSIONS_DIR` 分别 `resolve()` 后比较）。[D2]\n\n这两道关思路不同（一个管输入、一个管输出），不会一起失效；并且有测试覆盖路径穿越、绝对路径、Windows 反斜杠、超长名字等攻击字符串，验证它们都会变成合法文件名。[D1]",
+        "refused": false,
+        "expect_refusal": false,
+        "sources": [
+          "article/06-session-and-cli.md（片段 10）",
+          "article/06-session-and-cli.md（片段 12）"
+        ],
+        "citation_count": 2,
+        "citation_ok": true,
+        "trace": [
+          "retrieve:n=3",
+          "relevance:enough=True:generate_answer",
+          "answer"
+        ]
+      },
+      {
+        "id": "doc-21",
+        "category": "doc",
+        "question": "一次性模式没人可问时，改动类调用怎么处理？",
+        "answer": "一次性模式下没人可问，改动类调用会被**当场拒绝**，拒绝理由作为普通工具结果回给模型，因此循环不会卡在等待一个永远不会到来的输入上 [D1]。\n\n- 需要全部预授权时，加 `--yes`（适用于脚本、CI 场景）[D1]。\n- 补充：若同时开启 plan 模式，其优先级最高，`self.plan_mode and tc.name not in Permission.READ_ONLY` 命中即拒绝，连 `--yes` 也压不过它 [D3]。",
+        "refused": false,
+        "expect_refusal": false,
+        "sources": [
+          "README_CN.md（片段 32）",
+          "article/02-tools.md（片段 17）"
+        ],
+        "citation_count": 2,
+        "citation_ok": true,
+        "trace": [
+          "retrieve:n=3",
+          "relevance:enough=True:generate_answer",
+          "answer"
+        ]
+      },
+      {
+        "id": "doc-22",
+        "category": "doc",
+        "question": "fork 之后先跑哪条命令确认基线测试全绿？",
+        "answer": "fork 并 clone 到本地后，先执行：\n\n```bash\npip install -e .\npython -m pytest tests/ -q\n```\n\n其中用于确认基线测试全部通过的命令是 `python -m pytest tests/ -q`，预期会看到 235 个测试全部通过 [D2][D1]。文档特别强调这一步不能跳过，因为它能确认你的环境是干净的，之后改出问题时才能判断问题来自你的改动，而不是环境本来就坏了 [D1]。",
+        "refused": false,
+        "expect_refusal": false,
+        "sources": [
+          "article/07-build-your-own.md（片段 0）",
+          "article/07-build-your-own.md（片段 1）"
+        ],
+        "citation_count": 2,
+        "citation_ok": true,
+        "trace": [
+          "retrieve:n=3",
+          "relevance:enough=True:generate_answer",
+          "answer"
+        ]
+      },
+      {
+        "id": "doc-23",
+        "category": "doc",
+        "question": "pre 钩子用哪个退出码否决调用，stderr 去哪了？",
+        "answer": "**结论：PreToolUse 钩子用退出码 `2` 否决调用；它的 stderr 会作为否决理由原样回给模型，而不是打印给用户。**\n\n细节：\n\n- 退出码为 `2` 即表示否决这次调用 [D1][D3]。\n- stderr 的去向：它会被塞回给模型，作为工具结果，让模型知道“这次调用被钩子拦了，因为什么”，再由模型自己决定换写法还是换路径 [D2]。\n- 如果 stderr 为空，则理由取 `\"no reason given\"`，最终返回形如 `\"Blocked by hook: \" + reason` [D2]。\n- 对比：PostToolUse 钩子只观察，退出码是什么都不管，永远拦不住 [D1][D2]。",
+        "refused": false,
+        "expect_refusal": false,
+        "sources": [
+          "README_CN.md（片段 35）",
+          "article/08-extensibility.md（片段 6）",
+          "article/08-extensibility.md（片段 7）"
+        ],
+        "citation_count": 3,
+        "citation_ok": true,
+        "trace": [
+          "retrieve:n=3",
+          "relevance:enough=True:generate_answer",
+          "answer"
+        ]
+      },
+      {
+        "id": "doc-24",
+        "category": "doc",
+        "question": "计划模式用什么压住整个权限层？",
+        "answer": "计划模式靠**在授权闸前面加一支优先级最高的拒绝分支**来压住整个权限层，而不是修改权限层本身。\n\n- 代码里明确把计划模式放在最顶上，连 `--yes` 的“全部同意”也被压住：`if self.plan_mode and tc.name not in Permission.READ_ONLY:` 一律拒绝写操作类工具 [D1]。\n- 机制上就是 `Agent` 身上的一个开关，在授权闸前面多出来的一支拒绝分支，授权闸本身一行没动 [D2]。\n- 开着时一切改动类调用（写文件、编辑、bash、MCP 工具、子 agent）当场被拒，拒绝理由作为普通工具结果回给模型，让它用只读工具继续摸底 [D2]。",
+        "refused": false,
+        "expect_refusal": false,
+        "sources": [
+          "article/08-extensibility.md（片段 9）",
+          "README_CN.md（片段 33）"
+        ],
+        "citation_count": 2,
+        "citation_ok": true,
+        "trace": [
+          "retrieve:n=3",
+          "relevance:enough=True:generate_answer",
+          "answer"
+        ]
+      },
+      {
+        "id": "ref-01",
+        "category": "refusal",
+        "question": "CoreCoder 用的是哪个向量数据库？",
+        "answer": "根据现有资料无法回答这个问题。",
+        "refused": true,
+        "expect_refusal": true,
+        "sources": [],
+        "citation_count": 0,
+        "citation_ok": true,
+        "trace": [
+          "retrieve:n=3",
+          "relevance:enough=False:github",
+          "github:empty:n=0",
+          "refuse:no_context"
+        ]
+      },
+      {
+        "id": "ref-02",
+        "category": "refusal",
+        "question": "怎么用 Docker 部署 CoreCoder？",
+        "answer": "根据现有资料无法回答这个问题。",
+        "refused": true,
+        "expect_refusal": true,
+        "sources": [],
+        "citation_count": 0,
+        "citation_ok": true,
+        "trace": [
+          "retrieve:n=3",
+          "relevance:enough=False:github",
+          "github:empty:n=0",
+          "refuse:no_context"
+        ]
+      },
+      {
+        "id": "ref-03",
+        "category": "refusal",
+        "question": "CoreCoder 的 Web 界面怎么打开？",
+        "answer": "根据现有资料无法回答这个问题。",
+        "refused": true,
+        "expect_refusal": true,
+        "sources": [],
+        "citation_count": 0,
+        "citation_ok": true,
+        "trace": [
+          "retrieve:n=3",
+          "relevance:enough=False:github",
+          "github:empty:n=0",
+          "refuse:no_context"
+        ]
+      },
+      {
+        "id": "ref-04",
+        "category": "refusal",
+        "question": "会话数据存在 Postgres 还是 Redis？",
+        "answer": "根据现有资料无法回答这个问题。",
+        "refused": true,
+        "expect_refusal": true,
+        "sources": [],
+        "citation_count": 0,
+        "citation_ok": true,
+        "trace": [
+          "retrieve:n=3",
+          "relevance:enough=False:github",
+          "github:empty:n=0",
+          "refuse:no_context"
+        ]
+      },
+      {
+        "id": "ref-05",
+        "category": "refusal",
+        "question": "怎么给 CoreCoder 加多用户登录？",
+        "answer": "根据现有资料无法回答这个问题。",
+        "refused": true,
+        "expect_refusal": true,
+        "sources": [],
+        "citation_count": 0,
+        "citation_ok": true,
+        "trace": [
+          "retrieve:n=3",
+          "relevance:enough=False:github",
+          "github:empty:n=0",
+          "refuse:no_context"
+        ]
+      },
+      {
+        "id": "ref-06",
+        "category": "refusal",
+        "question": "Kubernetes 部署清单在哪里？",
+        "answer": "根据现有资料无法回答这个问题。",
+        "refused": true,
+        "expect_refusal": true,
+        "sources": [],
+        "citation_count": 0,
+        "citation_ok": true,
+        "trace": [
+          "retrieve:n=3",
+          "relevance:enough=False:github",
+          "github:empty:n=0",
+          "refuse:no_context"
+        ]
+      },
+      {
+        "id": "ref-07",
+        "category": "refusal",
+        "question": "模型的微调脚本放在哪个目录？",
+        "answer": "根据现有资料无法回答这个问题。",
+        "refused": true,
+        "expect_refusal": true,
+        "sources": [],
+        "citation_count": 0,
+        "citation_ok": true,
+        "trace": [
+          "retrieve:n=3",
+          "relevance:enough=False:github",
+          "github:empty:n=0",
+          "refuse:no_context"
+        ]
+      },
+      {
+        "id": "ref-08",
+        "category": "refusal",
+        "question": "CoreCoder 的运行日志写到哪个文件？",
+        "answer": "根据现有资料无法回答这个问题。",
+        "refused": true,
+        "expect_refusal": true,
+        "sources": [],
+        "citation_count": 0,
+        "citation_ok": true,
+        "trace": [
+          "retrieve:n=3",
+          "relevance:enough=False:github",
+          "github:empty:n=0",
+          "refuse:no_context"
+        ]
+      },
+      {
+        "id": "gh-01",
+        "category": "github",
+        "question": "MCP 的文本资源可以按需读取吗？",
+        "answer": "可以。MCP 文本资料只按需读取，不建立检索索引，也不运行后台同步 [D1]。",
+        "refused": false,
+        "expect_refusal": false,
+        "sources": [
+          "README_CN.md（片段 30）"
+        ],
+        "citation_count": 1,
+        "citation_ok": true,
+        "trace": [
+          "retrieve:n=3",
+          "relevance:enough=True:generate_answer",
+          "answer"
+        ]
+      },
+      {
+        "id": "gh-02",
+        "category": "github",
+        "question": "edit_file 在 Windows 上会把行尾改成 CRLF 吗？",
+        "answer": "会。根据 issue 报告，`EditFileTool.execute` 用 `Path.read_text` 读、用 `Path.write_text` 写，两者都会做行尾转换，因此在 Windows 上，一个 LF 文件被编辑后每一行都会变成 CRLF [I1]。文档也印证了读取侧用的是 `p.read_text(encoding=\"utf-8\")`，未指定 `newline` 参数 [D1][D3]。\n\n同一 issue 还列出两个相关后果：在 Windows 上，`new_string` 里带 `\\r\\n` 会被写成 `\\r\\r\\n`，每次换行多出一个空行；而 `old_string` 里带 `\\r\\n` 则永远匹配不上，因为被匹配的文本里没有 `\\r` [I1]。",
+        "refused": false,
+        "expect_refusal": false,
+        "sources": [
+          "Issue #59: edit_file rewrites every line ending of the file it edits (LF to CRLF on Windows, CRLF to LF on Linux/macOS) (https://github.com/he-yufeng/CoreCoder/issues/59)",
+          "article/02-tools.md（片段 8）",
+          "article/02-tools.md（片段 9）"
+        ],
+        "citation_count": 2,
+        "citation_ok": true,
+        "trace": [
+          "retrieve:n=3",
+          "relevance:enough=False:github",
+          "github:ok:n=1",
+          "answer"
+        ]
+      },
+      {
+        "id": "gh-03",
+        "category": "github",
+        "question": "Kimi 模型第一次工具调用后失败，reasoning_content 没回传是怎么回事？",
+        "answer": "根据现有资料，只能确认一点：Kimi 的工具调用轮按 thinking 协议要求，必须把 `reasoning_content` 带进下一次请求；普通回答则不会把思考过程放进对话历史 [D3]。而 agent 循环每一轮都会把完整历史发给模型，工具输出会作为 `tool` 消息追加回历史 [D1]。因此，如果第一次工具调用后没有回传 `reasoning_content`，下一次请求就缺少协议要求的该字段，这与资料描述的 Kimi 工具调用轮要求不一致 [D3]。\n\n但资料没有说明这种缺失具体会导致什么失败、报什么错，也没有说明“第一次工具调用后失败”的排查方法。根据现有资料无法回答失败的具体原因。",
+        "refused": false,
+        "expect_refusal": false,
+        "sources": [
+          "README_CN.md（片段 10）",
+          "article/01-the-loop.md（片段 4）"
+        ],
+        "citation_count": 2,
+        "citation_ok": true,
+        "trace": [
+          "retrieve:n=3",
+          "relevance:enough=True:generate_answer",
+          "answer"
+        ]
+      },
+      {
+        "id": "gh-04",
+        "category": "github",
+        "question": "temperature=0 时 Kimi 请求报 400 怎么办？",
+        "answer": "根据现有资料，CoreCoder 会自动处理这种情况：当服务以 400 错误指出 `temperature` 不受支持时，CoreCoder 会移除该参数并重试，改用服务端支持的默认值；Kimi 不带引号的报错也能被识别，无需额外设置 `CORECODER_TEMPERATURE` [D1]。\n\n因此遇到该 400 报错时，直接让 CoreCoder 重试即可，不必手动去掉 `temperature` 或配置额外变量 [D1]。",
+        "refused": false,
+        "expect_refusal": false,
+        "sources": [
+          "README_CN.md（片段 9）"
+        ],
+        "citation_count": 1,
+        "citation_ok": true,
+        "trace": [
+          "retrieve:n=3",
+          "relevance:enough=True:generate_answer",
+          "answer"
+        ]
+      }
+    ]
+  }
+}
